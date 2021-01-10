@@ -73,7 +73,6 @@ save "${OUT}/stkcd_returnsnonmed.dta",replace
 
 *********************prepare datafiles for estudy
 *4+7city  sample
-foreach g in 47 other med nonmed {       
 	foreach k in $stkcd_47 {
 		cntrade `k',path(${INPUT}) 
 		keep stkcd date rit
@@ -92,7 +91,7 @@ foreach g in 47 other med nonmed {
 	tab _m
 	drop _m
 save "${INT}/mergedta2018_47.dta",replace
-}
+
 * other city  sample
 	foreach k in $stkcd_other {
 		cntrade `k',path(${INPUT}) 
