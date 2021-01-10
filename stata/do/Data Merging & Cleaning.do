@@ -13,9 +13,9 @@ save "${OUT}/shenwan_medical_industry(II)finallist.dta",replace
 	format date %tdNNDDCCYY
 save "${OUT}/shenwan_medical_industry(II)eventlist.dta",replace  
 
-//the code above 
+//the code above determined the stock sample 
 
-*set the stock sample list. Note, the lists are based on the ”申万医药生物指数成份股finallist.dta“. 
+*set the stock sample list. Note, the lists are based on the ”henwan_medical_industry(II)finallist.dta“. 
 do "${DO}/global.do" 
 
 ***************************************************** prepare historic stock value
