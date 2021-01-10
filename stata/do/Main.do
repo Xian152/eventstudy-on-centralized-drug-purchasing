@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-*** The effect of on medical stocks using event study 
+*** The effect of centralized drug-purchasing on stock value, using event study 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 /*
 Date: 12/11
@@ -32,8 +32,8 @@ global OUT "${root}/stata/output"
 * Define path for output data
 global DO "${root}/stata/do"
 
-*install packages for event study：//cntrade cnindex estudy eventstudy2 psmatch2 moremata user-written  psmatch2 moremata user-written nearmrg distinct _gprod rmse parallel
-foreach k in cntrade cnindex estudy eventstudy2 psmatch2 moremata user-written  psmatch2 moremata user-written nearmrg distinct _gprod rmse parallel{
+*install packages for event study：//cntrade cnindex estudy eventstudy2  psmatch2 moremata nearmrg distinct _gprod rmse parallel
+foreach k in cntrade cnindex estudy eventstudy2  psmatch2 moremata nearmrg distinct _gprod rmse parallel{
 	capture which `k'  
 	if _rc!=0{
 		ssc install `k',replace  
